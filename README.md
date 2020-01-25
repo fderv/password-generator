@@ -1,4 +1,4 @@
-Usage: $0 [--length LENGTH] [--variety VARIETY] [--count COUNT]
+    Usage: $0 [--length LENGTH] [--variety VARIETY] [--count COUNT]
     
     Arguments:
     -h, --help      show this help message and exit
