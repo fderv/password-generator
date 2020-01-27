@@ -1,15 +1,12 @@
 #!/bin/bash
 
 #DEFAULT VARIABLES
+LENGTH=16 	#password length
 
-#password length
-LENGTH=16
+VARIETY=4 	#password variety 
+		#[1:only digit, 2:only letter, 3:digit+leter, 4:digit+letter+special
 
-#password variety [1:only digit, 2:only letter, 3:digit+leter, 4:digit+letter+special
-VARIETY=4
-
-#number of passwords to be generated
-COUNT=1
+COUNT=1		#number of passwords to be generated
 
 #Usage info
 usage() {
@@ -39,19 +36,19 @@ do
         -h|--help)
             usage;
             exit 0;;
-		-l|--length)
-			LENGTH=$2
-			shift 2;;
+	-l|--length)
+		LENGTH=$2
+		shift 2;;
     	-v|--variety)
-			VARIETY=$2
-			shift 2;;
+		VARIETY=$2
+		shift 2;;
     	-c|--count)
-			COUNT=$2
-			shift 2;;
+		COUNT=$2
+		shift 2;;
     	-*)
-			echo "Invalid argument: $1"
-			echo "See --help or -h for valid arguments"
-			exit 1;;
+		echo "Invalid argument: $1"
+		echo "See --help or -h for valid arguments"
+		exit 1;;
     esac
 done
 
